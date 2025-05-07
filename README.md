@@ -1,16 +1,21 @@
-## Hi there 👋
+# Hi, I'm [Baljyot Singh Gill] 👋
 
-<!--
-**driveskill/driveskill** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Welcome to my portfolio!
 
-Here are some ideas to get you started:
+I’m a self-taught **Web Developer** and **Thumbnail Designer**. I create:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- Responsive websites using **HTML & CSS**
+- Custom **YouTube thumbnails** and banners
+- Background removal & photo edits
+
+## 🔧 Skills
+- HTML5
+- CSS
+- Canva / Photoshop
+- GitHub Pages
+
+## 📬 Contact Me
+- **Email:** kingffshayari@email.com  
+- **Instagram:** (https://instagram.com/yourhandle)
+
+Let’s build something great together!
