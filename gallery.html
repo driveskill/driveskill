@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thumbnail Gallery | Baljyot Singh</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+      min-height: 100vh;
+      padding: 80px 20px 40px;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .dark-mode {
+      background: linear-gradient(to right, #000000, #434343);
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #typed-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffdd57;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #ffdd57;
+      width: fit-content;
+      margin: 0 auto;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .gallery a img {
+      width: 100%;
+      border-radius: 15px;
+      border: 2px solid #ffdd57;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery a img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(255, 221, 87, 0.5);
+    }
+
+    .btn-fixed {
+      position: fixed;
+      top: 20px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+    }
+
+    .btn-back {
+      left: 20px;
+    }
+
+    .btn-dark {
+      right: 20px;
+    }
+
+    .dark-mode .btn-fixed {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 20px;
+      font-style: italic;
+      font-size: 1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Buttons -->
+  <a href="index.html" class="btn-fixed btn-back">← Back</a>
+  <button class="btn-fixed btn-dark" onclick="toggleMode()">🌙</button>
+
+  <!-- Typing Title -->
+  <div class="header">
+    <div id="typed-title">My Thumbnail Gallery</div>
+  </div>
+
+  <p class="subtitle">Click image to view in full</p>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <a href="https://ibb.co/pj8X3JMT" target="_blank">
+      <img src="https://i.ibb.co/pj8X3JMT/3c2bbae413963968fa9dc8e296bd558d.jpg" alt="Thumbnail 1" />
+    </a>
+    <a href="https://ibb.co/TBqjKWcp" target="_blank">
+      <img src="https://i.ibb.co/TBqjKWcp/dd72f0f3f127682c0b71539395ebaa74.jpg" alt="Thumbnail 2" />
+    </a>
+    <a href="https://ibb.co/RpvpSpZP" target="_blank">
+      <img src="https://i.ibb.co/RpvpSpZP/fdf59d79366f8e53b93ba7f7677cd0ce.jpg" alt="Thumbnail 3" />
+    </a>
+    <a href="https://ibb.co/Dfhx0MCy" target="_blank">
+      <img src="https://i.ibb.co/Dfhx0MCy/7f90cf5989177269cb683ae76a9b61ca.jpg" alt="Thumbnail 4" />
+    </a>
+    <a href="https://ibb.co/zkW2Qzp" target="_blank">
+      <img src="https://i.ibb.co/zkW2Qzp/15725b8af24e8ca67a542e1bcd644a7f.jpg" alt="Thumbnail 5" />
+    </a>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
