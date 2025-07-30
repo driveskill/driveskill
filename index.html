@@ -2,48 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baljyot Singh Gill | Front-End Developer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 18px;
-    }
-    .skills {
-      margin-top: 30px;
-    }
-    .skills span {
-      display: inline-block;
-      background-color: #2ecc71;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 20px;
-      margin: 5px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baljyot Singh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hi, I'm Baljyot Singh Gill</h1>
-  <p>I am a passionate front-end developer. I specialize in creating simple and clean websites using HTML and CSS. I am currently learning more about web development and building my portfolio step-by-step.</p>
-  
-  <div class="skills">
-    <h2>Skills</h2>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>Basic Design</span>
-    <span>Thumbnail Creation</span>
-    <span>Photo Editing</span>
+
+  <!-- Menu Button -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <input type="color" id="bgColorPicker" title="Choose Background Color" style="position: fixed; top: 1rem; right: 5rem; z-index:1000; border:none; width: 40px; height: 40px; cursor: pointer;">
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="gallery.html">🎨 Thumbnail Gallery</a>
+    <a href="https://driveskill.github.io/Ganesh-chaturthi-2025/" target="_blank">🌐 Website Project</a>
   </div>
+
+  <!-- Dark Mode Toggle -->
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- Hero Section -->
+  <section class="main-box">
+    <h1 id="typed-text"></h1>
+    <p id="typed-subtext"></p>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Baljyot — a passionate web and thumbnail designer. I create beautiful websites using HTML, CSS, and host them on GitHub. I also design eye-catching thumbnails for YouTube and Instagram using Canva and AI tools.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>✔ Website Design & Hosting</li>
+      <li>✔ Thumbnail Design for YouTube & Reels</li>
+      <li>✔ Fast Delivery & Mobile-Friendly Designs</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio">
+    <h2>✅Designs </h2>
+    <div class="project">
+      <h3>🌐Website Design</h3>
+      <a href="design.html">
+        <img src="https://i.ibb.co/9HGLdWKb/796a21ed3bb27a29d2c8a7f26b8582bd.jpg" alt="796a21ed3bb27a29d2c8a7f26b8582bd"
+        style="max-width:100%; border-radius:10px;">
+      </a>
+        
+      </menu>
+      </menu></a>
+    </div>
+    <div class="project">
+      <h3>🖼️ Thumbnail Design</h3>
+      <a href="gallery.html">
+        <img src="https://i.ibb.co/zkW2Qzp/15725b8af24e8ca67a542e1bcd644a7f.jpg" alt="Thumbnail Preview" style="max-width:100%; border-radius:10px;">
+      </a>
+      <p>Click to see full gallery of thumbnails</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>📧 Email: <a href="mailto:baljyotgill12@gmail.com">baljyotgill12@gmail.com</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/clickme4183" target="_blank">@ClickMe</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Baljyot Singh | All Rights Reserved</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
