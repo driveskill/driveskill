@@ -1,0 +1,184 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #222;
+  padding-top: 70px;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Fixed Menu Button */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  color: white;
+  border: 1px solid #ccc;
+}
+
+/* Fixed Dark Mode Toggle */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 3.8rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #444;
+}
+
+/* Hero Section */
+.main-box {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  color: white;
+}
+
+/* Sections */
+section {
+  margin: 2rem 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #00ffff;
+}
+
+/* Services List */
+.services ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Portfolio */
+.project {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.project h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s;
+}
+
+.project img:hover {
+  transform: scale(1.03);
+}
+
+/* Contact Links */
+.contact a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+  border-top: 1px solid #555;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #0c0c0c;
+  color: white;
+}
+
+.dark-mode section,
+.dark-mode .main-box {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.dark-mode .dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .dropdown-menu a {
+  color: white;
+  border-bottom: 1px solid #aaa;
+}
+
+.dark-mode .dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  /* OLD: background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+  background: #0f2027; /* fallback */
+}
