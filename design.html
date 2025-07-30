@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website Designs</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+      min-height: 100vh;
+      padding: 80px 20px 40px;
+      transition: background 0.4s ease;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #typed-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffdd57;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .gallery a img {
+      width: 100%;
+      border-radius: 15px;
+      border: 2px solid #ffdd57;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery a img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(255, 221, 87, 0.5);
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      text-decoration: none;
+      z-index: 9999;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid white;
+      color: white;
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      z-index: 9999;
+      backdrop-filter: blur(6px);
+    }
+
+    .dark-mode {
+      background: linear-gradient(to right, #000000, #434343);
+      color: white;
+    }
+
+    .dark-mode .gallery a img {
+      border-color: #00ffe0;
+      box-shadow: 0 4px 15px rgba(0, 255, 224, 0.5);
+    }
+
+    .dark-mode .gallery a img:hover {
+      box-shadow: 0 8px 25px rgba(0, 255, 224, 0.7);
+    }
+
+    .dark-mode .back-btn,
+    .dark-mode .dark-toggle {
+      background: rgba(255,255,255,0.15);
+      border-color: #ccc;
+    }
+
+    #img {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-btn">← Back to Portfolio</a>
+  <div class="dark-toggle" onclick="toggleDarkMode()">🌓</div>
+
+  <p id="img">Click Img To See Full And Attractive</p>
+
+  <div class="header">
+    <div id="typed-title"></div>
+  </div>
+
+  <div class="gallery">
+    <a href="https://ibb.co/vCxJDTV6">
+      <img src="https://i.ibb.co/vCxJDTV6/d4e90aa8734c9d52289bff6a8bfcbf23.jpg" alt="Design 1">
+    </a>
+    <a href="https://ibb.co/RkStSp2S">
+      <img src="https://i.ibb.co/RkStSp2S/124f5b157ef3f995f0b7474380246f64.jpg" alt="Design 2">
+    </a>
+    <a href="https://ibb.co/8gJMB0Mn">
+      <img src="https://i.ibb.co/8gJMB0Mn/da3e9080872591e860fdd8a3c92610cc.jpg" alt="Design 3">
+    </a>
+    <a href="https://ibb.co/nNtWHMn1">
+      <img src="https://i.ibb.co/nNtWHMn1/cf2627f4c1b4e22d9679b94b011654d5.jpg" alt="Design 4">
+    </a>
+    <a href="https://ibb.co/9HGLdWKb">
+      <img src="https://i.ibb.co/9HGLdWKb/796a21ed3bb27a29d2c8a7f26b8582bd.jpg" alt="Design 5">
+    </a>
+  </div>
+
+  <script>
+    const titleText = "My Website Designs";
+    let i = 0;
+    const speed = 80;
+
+    function typeTitle() {
+      if (i < titleText.length) {
+        document.getElementById("typed-title").innerHTML += titleText.charAt(i);
+        i++;
+        setTimeout(typeTitle, speed);
+      }
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    window.onload = typeTitle;
+  </script>
+</body>
+</html>
